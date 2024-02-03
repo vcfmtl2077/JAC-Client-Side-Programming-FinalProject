@@ -1,0 +1,124 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.form-container {
+    background-color: #f0f0f0;
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 50%;
+    height: 50%;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-left: 60px;
+    color: #333;
+    font-weight: bold;
+    width: 20%;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group input[type="tel"],
+.input-group input[type="email"]
+ {
+    width: 60%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group select{
+    padding: 8px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.dob {
+    display: flex;
+    justify-content:left;
+}
+
+.dob select {
+    /* flex-basis: calc(30%-10px); */
+    margin-right: 15px;
+}
+
+.dob select:last-child {
+    margin-right: 0;
+}
+
+/* .hobbies input[type="checkbox"] {
+    margin-right: 5px;
+}
+.hobbies input[type="text"] {
+    width:auto;
+}
+
+.table table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.table input[type="text"]{
+     width: 100%; 
+     box-sizing: border-box; 
+}  */
+.button {
+    background-color: #78a9e5;
+    color: white;
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box; 
+}
+
+.button:hover {
+    background-color: #377ec8;
+}
+
+/* Handle layout for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
