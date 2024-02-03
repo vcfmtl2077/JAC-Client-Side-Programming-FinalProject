@@ -218,7 +218,7 @@
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="itemList">
           <div class="col">
             <div class="card shadow-sm" data-aos="zoom-out-up">
               <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
@@ -424,8 +424,63 @@
   <script src="js/vendor/bootstrap.bundle.js"></script>
   <script src="js/vendor/aos.js"></script>
   <script>
-      AOS.init();
+    AOS.init();
+
+    function createCard() {
+      let div = document.createElement('div');
+      div.className = "col";
+      div.innerHTML = `<div class="card shadow-sm aos-init aos-animate" data-aos="zoom-out-up">
+              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <title>Placeholder</title>
+                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+              </svg>
+              <div class="card-body">
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                  </div>
+                  <small class="text-body-secondary">9 mins</small>
+                </div>
+              </div>
+            </div>`;
+      return div;
+    }
+
+    function isScrollAtBottom() {
+      return window.innerHeight + window.scrollY >= document.body.offsetHeight - 5;
+    }
+
+    // Function to load more cards
+    function loadMoreCards() {
+      const container = document.getElementById("itemList");
+      for (let i = 0; i < 5; i++) {
+        container.appendChild(createCard());
+      }
+      AOS.refresh();
+    }
+
+    // Load initial cards
+    loadMoreCards();
+
+    // Event listener for scroll
+    let isFetching = false;
+    window.addEventListener('scroll', () => {
+
+      if (isScrollAtBottom() && !isFetching) {
+        isFetching = true;
+
+        setTimeout(() => {
+          loadMoreCards();
+          AOS.init(); // Reload AOS to enable the animate
+          isFetching = false;
+        }, 1000); // Simulate network delay
+      }
+    });
   </script>
+
 </body>
 
 </html>
