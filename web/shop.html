@@ -459,11 +459,7 @@
       for (let i = 0; i < 5; i++) {
         container.appendChild(createCard());
       }
-      AOS.refresh();
     }
-
-    // Load initial cards
-    loadMoreCards();
 
     // Event listener for scroll
     let isFetching = false;
@@ -474,9 +470,9 @@
 
         setTimeout(() => {
           loadMoreCards();
-          AOS.init(); // Reload AOS to enable the animate
+          AOS.init(); // Reactive AOS library to enable the animate
           isFetching = false;
-        }, 1000); // Simulate network delay
+        }, 800); // Simulate network delay
       }
     });
   </script>
