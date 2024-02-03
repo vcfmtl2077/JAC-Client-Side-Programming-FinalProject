@@ -13,7 +13,6 @@
     <link rel="icon" href="assets/favicon.ico">
     <meta name="theme-color" content="#712cf9">
 
-
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -98,7 +97,7 @@
     <!-- <link href="sticky-footer-navbar.css" rel="stylesheet"> -->
 </head>
 
-<body class="d-flex flex-column h-100 cursor-enabled navbar-show navbar-end" >
+<body class="d-flex flex-column h-100 cursor-enabled navbar-show navbar-end">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
             <path
@@ -191,10 +190,12 @@
                             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
+                    <!-- <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    </form> -->
+                    <button onclick="changeLanguage('en')">English</button>
+                    <button onclick="changeLanguage('fr')">Français</button>
                 </div>
             </div>
         </nav>
@@ -202,7 +203,7 @@
 
     <!-- Begin page content -->
     <main class="flex-shrink-0" data-new-gr-c-s-check-loaded="14.1152.0" data-gr-ext-installed="">
-        <div class="content-wrap" id="content-wrap" >
+        <div class="content-wrap" id="content-wrap">
             <div class="py-160 min-vh-100 d-flex align-items-center position-relative lines-style-3">
                 <div class="line text-white"></div>
                 <div class="background bg-dark">
@@ -211,11 +212,11 @@
                     </div>
                     <div class="background-color" style="background-color: rgb(14, 14, 14); opacity: 0.2;"></div>
                 </div>
-                <div class="container" >
+                <div class="container">
                     <div class="row">
                         <div class="col-lg-1"></div>
                         <div data-aos="fade-right" class="col-12 col-lg-8 col-xl-7 aos-init aos-animate">
-                            <h1 class="text-white mb-0">We build creative experiences.</h1>
+                            <h1 class="text-white mb-0" data-i18n="service-slogan">Expert Care,<br> Your Pet's Joy.</h1>
                         </div>
                     </div>
                 </div>
@@ -227,18 +228,20 @@
                                 src="assets/media/user-experience-1040-1260.d9dd5e5d8f88122c7674.jpg" alt="">
                         </div>
                         <div data-aos="fade-left" class="col-12 ps-lg-0 col-lg-5 aos-init aos-animate">
-                            <h3 class="mb-n10">User Experience</h3>
+                            <h3 class="mb-n10" data-i18n="service-bath-title">User Experience</h3>
                             <hr class="mt-30 mb-60">
-                            <p class="mt-n7">Green upon was their divide unto and under good, seed third thing darkness
+                            <p class="mt-n7" data-i18n="service-bath-intro">Green upon was their divide unto and under
+                                good, seed third thing darkness
                                 may
                                 every created let Beast seed beast midst to evening hath which.</p>
                             <ul class="list mt-n7 mb-n8 font-size-18">
-                                <li>Research &amp; Discovery</li>
-                                <li>Brand &amp; Technology Strategy</li>
-                                <li>Information Architecture</li>
-                                <li>Prototyping</li>
-                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="/themebau/react/single-service">read
-                                more<span class="btn-ball" style="transform: translateY(0px);"></span></a>
+                                <li data-i18n="service-bath-item1">Research &amp; Discovery</li>
+                                <li data-i18n="service-bath-item2">Brand &amp; Technology Strategy</li>
+                                <li data-i18n="service-bath-item3">Information Architecture</li>
+                                <li data-i18n="service-bath-item4">Prototyping</li>
+                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="/themebau/react/single-service"
+                                data-i18n="service-reservation" data-i18n="service-reservation">Reservation<span class="btn-ball"
+                                    style="transform: translateY(0px);"></span></a>
                         </div>
                     </div>
                     <div class="gh-1 gv-3 align-items-center justify-content-between mb-110 row">
@@ -248,36 +251,40 @@
                         </div>
                         <div data-aos="fade-right"
                             class="col-12 col-lg-5 order-lg-1 ps-lg-0 ms-lg-30 col aos-init aos-animate">
-                            <h3 class="mb-n10">Design &amp; Creative</h3>
+                            <h3 class="mb-n10" data-i18n="service-hotel-title">Design &amp; Creative</h3>
                             <hr class="mt-30 mb-60">
-                            <p class="mt-n7">Dry image fruit fill he i had thing saying gathering bearing, their place
+                            <p class="mt-n7" data-i18n="service-hotel-intro">Dry image fruit fill he i had thing saying
+                                gathering bearing, their place
                                 given
                                 bearing us lights days one. Fruitful very seas won't give after.</p>
                             <ul class="list mt-n7 mb-n8 font-size-18">
-                                <li>Interactive Design</li>
-                                <li>Creative Concepts &amp; Ideas</li>
-                                <li>Websites &amp; Mobie Design</li>
-                                <li>Content Production</li>
-                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="/themebau/react/single-service">read
-                                more<span class="btn-ball" style="transform: translateY(0px);"></span></a>
+                                <li data-i18n="service-hotel-item1">Interactive Design</li>
+                                <li data-i18n="service-hotel-item2">Creative Concepts &amp; Ideas</li>
+                                <li data-i18n="service-hotel-item3">Websites &amp; Mobie Design</li>
+                                <li data-i18n="service-hotel-item4">Content Production</li>
+                            </ul><a class="btn btn-dark btn-with-ball mt-60"
+                                href="/themebau/react/single-service" data-i18n="service-reservation">Reservation<span class="btn-ball"
+                                    style="transform: translateY(0px);"></span></a>
                         </div>
                     </div>
                     <div class="gh-1 gv-3 align-items-center justify-content-between row">
                         <div data-aos="fade-right" class="col-12 col-lg-6 aos-init aos-animate"><img class="w-100"
                                 src="assets/media/development-services-1040-1260.42f934901b84b68e65d7.jpg" alt=""></div>
                         <div data-aos="fade-left" class="col-12 ps-lg-0 col-lg-5 aos-init aos-animate">
-                            <h3 class="mb-n10">Development Services</h3>
+                            <h3 class="mb-n10" data-i18n="service-groom-title">Development Services</h3>
                             <hr class="mt-30 mb-60">
-                            <p class="mt-n7">May said creepeth god form in over be under divide you'll seas Green to
+                            <p class="mt-n7" data-i18n="service-groom-intro">May said creepeth god form in over be under
+                                divide you'll seas Green to
                                 forth air.
                                 Years were. Void stars firmament them night for earth fill land.</p>
                             <ul class="list mt-n7 mb-n8 font-size-18">
-                                <li>Content Management System</li>
-                                <li>Front-end Development</li>
-                                <li>Data &amp; Analytics</li>
-                                <li>Web &amp; Mobile Development</li>
-                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="/themebau/react/single-service">read
-                                more<span class="btn-ball" style="transform: translateY(0px);"></span></a>
+                                <li data-i18n="service-groom-item1">Content Management System</li>
+                                <li data-i18n="service-groom-item2">Front-end Development</li>
+                                <li data-i18n="service-groom-item3">Data &amp; Analytics</li>
+                                <li data-i18n="service-groom-item4">Web &amp; Mobile Development</li>
+                            </ul><a class="btn btn-dark btn-with-ball mt-60"
+                                href="/themebau/react/single-service" data-i18n="service-reservation">Reservation<span class="btn-ball"
+                                    style="transform: translateY(0px);"></span></a>
                         </div>
                     </div>
                 </div>
@@ -292,9 +299,88 @@
     </footer>
     <script src="js/vendor/color-modes.js"></script>
     <script src="js/vendor/bootstrap.bundle.js"></script>
+    <script src="js/vendor/i18n/i18next.js"></script>
     <script src="js/vendor/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        i18next
+            .init({
+                lng: 'en',
+                fallbackLng: 'en',
+                debug: true,
+                resources: {
+                    en: {
+                        translation: {
+                            "service-slogan": "Expert Care,<br> Your Pet's Joy",
+                            "service-bath-title": "Bubble Bliss Pet Spa",
+                            "service-bath-intro": "Bubble Bliss Pet Spa offers a luxurious and comforting bathing experience for pets. Understanding the importance of pet hygiene and wellness, we specialize in providing a serene and safe environment for your furry friends. ",
+                            "service-bath-item1": "Holistic Pet Care",
+                            "service-bath-item2": "Stress-Free Environment",
+                            "service-bath-item3": "Personalized Attention",
+                            "service-bath-item4": "Expert Team",
+
+                            "service-hotel-title": "Pet Resort",
+                            "service-hotel-intro": "Our Pets Hotel service offers a unique and luxurious home away from home for your furry family members. Understanding the concerns of pet owners when they need to travel, we've created a safe, fun, and comfortable environment for pets to stay. Our hotel is not just a boarding facility; it's a retreat for pets to enjoy their own vacation while their owners are away.",
+                            "service-hotel-item1": "Comfortable Accommodations",
+                            "service-hotel-item2": "Health and Safety Prioritized",
+                            "service-hotel-item3": "Engaging Activities",
+                            "service-hotel-item4": "Personalized Care",
+
+                            "service-groom-title": "Picture Perfect Pet Grooming",
+                            "service-groom-intro": "Picture Perfect Pet Grooming offers an innovative and delightful experience, combining professional pet grooming with a dedicated pet photography service. We understand the bond between pets and their owners and aim to capture and enhance that through our unique services. Our facility is designed to ensure that your pet not only looks their best but also feels comfortable and loved throughout the process.",
+                            "service-groom-item1": "Expert Grooming Services",
+                            "service-groom-item2": "Professional Pet Photography",
+                            "service-groom-item3": "Comfortable and Safe Environment",
+                            "service-groom-item4": "Personalized Experience",
+
+                            "service-reservation": "Reservition Service"
+                        }
+                    },
+                    fr: {
+                        translation: {
+                            "service-slogan": "Soin Expert,<br> Joie de votre Animal",
+                            "service-bath-title": "Spa Bulle Bliss pour Animaux",
+                            "service-bath-intro": "Spa Bulle Bliss pour Animaux offre une expérience de bain luxueuse et réconfortante pour les animaux de compagnie. Compréhendant l'importance de l'hygiène et du bien-être des animaux, nous nous spécialisons dans la fourniture d'un environnement serein et sécuritaire pour vos amis à fourrure. ",
+                            "service-bath-item1": "Soins Holistiques pour Animaux",
+                            "service-bath-item2": "Environnement Sans Stress",
+                            "service-bath-item3": "Attention Personnalisée",
+                            "service-bath-item4": "Équipe d'Experts",
+
+                            "service-hotel-title": "Complexe Hôtelier pour Animaux de Compagnie",
+                            "service-hotel-intro": "Notre service d'Hôtel pour Animaux offre un chez-soi unique et luxueux pour vos membres de la famille à fourrure lors de vos déplacements. Conscient des préoccupations des propriétaires d'animaux lorsqu'ils doivent voyager, nous avons créé un environnement sûr, amusant et confortable pour le séjour des animaux. Notre hôtel n'est pas seulement un établissement de pension ; c'est une retraite où les animaux peuvent profiter de leurs propres vacances pendant que leurs propriétaires sont absents.",
+                            "service-hotel-item1": "Hébergements Confortables",
+                            "service-hotel-item2": "Santé et Sécurité Priorisées",
+                            "service-hotel-item3": "Activités Stimulantes",
+                            "service-hotel-item4": "Soins Personnalisés",
+
+                            "service-groom-title": "Toilettage Parfait pour Animaux de Compagnie",
+                            "service-groom-intro": "Toilettage Parfait pour Animaux de Compagnie offre une expérience innovante et agréable, combinant le toilettage professionnel des animaux avec un service dédié de photographie pour animaux de compagnie. Nous comprenons le lien entre les animaux de compagnie et leurs propriétaires et visons à capturer et à améliorer cela à travers nos services uniques. Notre établissement est conçu pour garantir que votre animal de compagnie non seulement paraît sous son meilleur jour, mais se sente également à l'aise et aimé tout au long du processus.",
+                            "service-groom-item1": "Services de Toilettage Experts",
+                            "service-groom-item2": "Photographie Professionnelle pour Animaux de Compagnie",
+                            "service-groom-item3": "Environnement Confortable et Sûr",
+                            "service-groom-item4": "Expérience Personnalisée",
+
+                            "service-reservation": "Service de Réservation"
+                        }
+                    }
+                }
+            }, function (err, t) {
+                // init set content
+                updateContent();
+            });
+        i18next.on('languageChanged', () => {
+            updateContent();
+        });
+        function changeLanguage(lng) {
+            i18next.changeLanguage(lng);
+        }
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                el.innerHTML = i18next.t(el.getAttribute('data-i18n'));
+            });
+        }
     </script>
 </body>
 
