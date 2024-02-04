@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-h1 {
+.headerContent {
     font-size: 4.375em;
     line-height: 1.2;
     margin-bottom: 0.7428571429em;
