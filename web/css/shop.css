@@ -8,6 +8,6 @@
     color: rgba(255, 255, 255, 0.75);
 }
 .itemImage{
-    max-width: 420px;
-    max-height: 225px;
+    max-width: 26em;
+    max-height: 14em;
 }
