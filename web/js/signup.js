@@ -1,6 +1,7 @@
 var ls = new SecureLS({ encodingType: 'aes' });
 const signupForm = document.getElementById("signupForm");
 const loginForm = document.getElementById("loginForm");
+const loginLink = document.getElementById("loginLink");
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -28,16 +29,17 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             authenticate();
         });
-        
+
         var signupButton = document.getElementById('signupButton');
         if (signupButton) {
-            signupButton.addEventListener('click', function() {
-                window.location.href = 'signup.html'; 
+            signupButton.addEventListener('click', function () {
+                window.location.href = 'signup.html';
             });
         }
-
     }
-});
+
+    if (loginLink) updateLoginStatus();
+})
 
 function populateYears() {
     var yearSelect = document.getElementById('year');
@@ -109,7 +111,7 @@ function addUser() {
         ls.set(user.username, user); // Data is automatically encrypted
         alert("Sign up successful!");
         window.location.href = 'login.html';
-    } 
+    }
 
     console.log('User info after decryption:', localStorage.getItem(user.username));
     console.log('Decrypted data:', ls.get(user.username));
@@ -148,10 +150,40 @@ function authenticate() {
     let user = ls.get(username);
     if (user && user.password === password) {
         alert("Login successful!");
+        localStorage.setItem('isLoggedIn', 'true');
         window.location.href = 'index.html'; 
+        //window.location.href = 'contact_us.html';
+
     } else {
         // document.getElementById("errorMessage").style.display = "block";
         alert("Username or Password Invalid");
         return;
+    }
+}
+
+function updateLoginStatus() {
+    if (loginLink) {
+        let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        if (isLoggedIn) {
+            loginLink.textContent = 'Logout';
+            loginLink.href = '#';
+            loginLink.onclick = function (event) {
+                event.preventDefault();
+                logoutUser();
+            };
+        } else {
+            loginLink.textContent = 'Login';
+            loginLink.href = 'login.html';
+            loginLink.onclick = null;
+        }
+    }
+}
+
+function logoutUser() {
+    localStorage.removeItem('isLoggedIn');
+    updateLoginStatus();
+
+    if (!location.pathname.includes('contact_us.html')) {
+        window.location.href = 'index.html';
     }
 }

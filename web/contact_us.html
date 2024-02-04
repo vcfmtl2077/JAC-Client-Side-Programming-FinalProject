@@ -12,12 +12,35 @@
 </head>
 
 <body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a class="logo" href="index.html">Pets Pets</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact_us.html" class="active">Contact us</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a id = "loginLink" href="login.html">Login</a></li>
+                <li><a href="#" class="disabled" tabindex="-1">Disabled</a></li>
+            </ul>
+            <!-- <div class="right-box">
+                <button id="login"> -->
+                    <!-- <i class="fas fa-user-circle"></i> -->
+                    <!-- <p>Log-in</p>
+                </button>
+            </div> -->
+
+            <div class="search-container">
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
     <div class="contact-container">
-        <!-- Contact List -->
-        
         <div  class="contact-list" >
             <h1>Our Team Member</h1>
-            <!-- Individual Contact -->
             <div class="contact-item" data-aos = "fade-left">
                 <header>
                     <h2>Shuo Li</h2>
@@ -86,9 +109,11 @@
     
         </div>
     </div>
-    <script src="js/contact_us.js"></script>
+    <!-- <script src="js/contact_us.js"></script> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/secure-ls/dist/secure-ls.min.js"></script>
+    <script src="js/signup.js"></script>
 </body>
 
 </html>
