@@ -2,11 +2,14 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+
+    
     
 }
 
 .form-container {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    background-color: rgba(240, 240, 240, 0.8);
     width: 50%;
     margin: 50px auto;
     padding: 20px;
@@ -17,6 +20,11 @@ body, html {
 .header {
     text-align: center;
     margin-bottom: 40px;
+}
+.header h2{
+    text-align: left;
+    margin-left: 60px;
+    color:#c59E67;
 }
 
 .logo {
@@ -81,23 +89,7 @@ body, html {
     margin-right: 0;
 }
 
-/* .hobbies input[type="checkbox"] {
-    margin-right: 5px;
-}
-.hobbies input[type="text"] {
-    width:auto;
-}
 
-.table table{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.table input[type="text"]{
-     width: 100%; 
-     box-sizing: border-box; 
-}  */
 .button {
     background-color: #78a9e5;
     color: white;
@@ -110,6 +102,19 @@ body, html {
     display: block;
     box-sizing: border-box; 
 }
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100; /* Ensure video stays in the background */
+    background-size: cover;
+}
+
 
 .button:hover {
     background-color: #377ec8;

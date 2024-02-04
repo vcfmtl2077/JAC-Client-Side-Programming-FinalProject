@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if (signupForm) {
         populateYears();
         populateMonths();
+        populateDays();
 
         document.getElementById('year').onchange = function () {
-            populateDays(document.getElementById('month').value);
+            populateDays();
         }
 
         document.getElementById('month').onchange = function () {
-            populateDays(this.value);
+            populateDays();
         }
 
         signupForm.addEventListener("submit", function (event) {
@@ -27,9 +28,16 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             authenticate();
         });
+        
+        var signupButton = document.getElementById('signupButton');
+        if (signupButton) {
+            signupButton.addEventListener('click', function() {
+                window.location.href = 'signup.html'; 
+            });
+        }
+
     }
 });
-
 
 function populateYears() {
     var yearSelect = document.getElementById('year');
@@ -53,10 +61,12 @@ function populateMonths() {
     });
 }
 
-function populateDays(month) {
+function populateDays() {
     var daySelect = document.getElementById('day');
+    var monthSelect = document.getElementById('month');
     var yearSelect = document.getElementById('year');
     var year = yearSelect.value;
+    var month = monthSelect.value;
     var dayCount;
     if (month === '2') {
         // Check for leap year
@@ -94,34 +104,43 @@ function addUser() {
     };
     console.log('User info before encryption:', user);
 
-    if (ls.get(user.username)) {
-        alert("Username already exists, please re-enter it.");
-        return;
-    }
 
-    var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/;
-    if (!passwordPattern.test(user.password)) {
-        alert("Please contain numbers, uppercase and lowercase letters, and symbols, and must be at least 8 characters long.");
-        return;
-    }
+    if (validUserName(user.username) && validPassword(user.password) && validPhone(user.phone)) {
+        ls.set(user.username, user); // Data is automatically encrypted
+        alert("Sign up successful!");
+        window.location.href = 'login.html';
+    } 
 
-    var phonePattern = /^\+?(\d{1,3})?[-. ]?\(?\d{1,3}\)?[-. ]?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$/;
-    if (!phonePattern.test(user.phone)) {
-        alert("TelepThe phone number does not meet the requirements, please re-enterhone");
-        return;
-    }
-
-    if ((user.username.length > 50) || (user.password.length > 50) || (user.firstname.length > 50) || (user.lastname.length > 50)) {
-        alert('Input must be less than 50 characters.');
-        return;
-    }
-
-    ls.set(user.username, user); // Data is automatically encrypted
     console.log('User info after decryption:', localStorage.getItem(user.username));
     console.log('Decrypted data:', ls.get(user.username));
-    alert("Sign up successful!");
 
 };
+
+function validUserName(username) {
+    if (username.length > 50) {
+        alert('Username must be less than 50 characters.');
+        return false;
+    }
+    return true;
+}
+
+function validPassword(password) {
+    var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/;
+    if (!passwordPattern.test(password)) {
+        alert("Password must contain numbers, uppercase and lowercase letters, and symbols, and must be at least 8 characters long.");
+        return false;
+    }
+    return true;
+}
+
+function validPhone(phone) {
+    var phonePattern = /^\+?(\d{1,3})?[-. ]?\(?\d{1,3}\)?[-. ]?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$/;
+    if (!phonePattern.test(phone)) {
+        alert("The phone number does not meet the requirements, please re-enter.");
+        return false;
+    }
+    return true;
+}
 
 function authenticate() {
     let username = document.getElementById("userName").value;
@@ -129,7 +148,10 @@ function authenticate() {
     let user = ls.get(username);
     if (user && user.password === password) {
         alert("Login successful!");
+        window.location.href = 'index.html'; 
     } else {
-        document.getElementById("errorMessage").style.display = "block";
+        // document.getElementById("errorMessage").style.display = "block";
+        alert("Username or Password Invalid");
+        return;
     }
 }

@@ -41,6 +41,10 @@ body {
     margin-bottom: 10px;
 }
 
+.contact-item h2{
+    color:rgb(64, 160, 212);
+}
+
 .contact-image {
     width: 200px; 
     height: 200px; 
