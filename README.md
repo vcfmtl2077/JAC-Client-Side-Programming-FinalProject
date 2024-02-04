@@ -24,29 +24,29 @@
 
 ## Site Map
 
-![](D:\MAP-08\05-CLIENT-SIDE WEB PROGRAMMING\FinalProject\screenShot\site map.jpg)
+![](.\screenShot\site map.jpg)
 
 ## Tech Stack
 
-![](D:\MAP-08\05-CLIENT-SIDE WEB PROGRAMMING\FinalProject\screenShot\tech stack.jpg)
+![](.\screenShot\tech stack.jpg)
 
 ## Features
 
 > ### Animation
 >
-> JavaScript Animation various types of encryption including `AES`, `DES`, `Rabbit` and `RC4`.
+> JavaScript Animation of various types of encryption including `AES`, `DES`, `Rabbit` and `RC4`.
 
 
 
 > ### Data security
 >
-> data encrypted - even for local storage
+> Data encrypted - even for local storage
 >
 > 
 
 > ### Internationalization
 >
-> standard i18n features, also complete solution to localize from web to mobile and desktop.
+> standard i18n features, also a complete solution to localize from web to mobile and desktop.
 
 
 
@@ -54,7 +54,7 @@
 
 ### Animation
 
-```html
+```HTML
 <!DOCTYPE html>
 <html lang="en">
 
