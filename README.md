@@ -24,17 +24,17 @@
 
 ## Site Map
 
-![](.\screenShot\site map.jpg)
+![](screenShot\site map.jpg)
 
 ## Tech Stack
 
-![](.\screenShot\tech stack.jpg)
+![](screenShot\tech stack.jpg)
 
 ## Features
 
 > ### Animation
 >
-> JavaScript Animation of various types of encryption including `AES`, `DES`, `Rabbit` and `RC4`.
+> JavaScript Animation of various types of encryption including `AES`, `DES`, `Rabbit`, and `RC4`.
 
 
 
