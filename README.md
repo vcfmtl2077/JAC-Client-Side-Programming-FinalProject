@@ -32,6 +32,12 @@
 
 ## Features
 
+> ### Responsive Web design
+>
+> Multiple layout for different device
+
+
+
 > ### Animation
 >
 > JavaScript Animation various types of encryption including `AES`, `DES`, `Rabbit` and `RC4`.
@@ -42,7 +48,8 @@
 >
 > data encrypted - even for local storage
 >
-> 
+
+
 
 > ### Internationalization
 >
@@ -82,20 +89,5 @@
 
 </html>
 ```
-
-
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-​       <link href="css/vendor/aos.css" rel="stylesheet">
-
-</head>
-
-<body>
-
-    <div class="contact-container">
-
 
 
