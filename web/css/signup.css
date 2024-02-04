@@ -2,11 +2,99 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    padding-top: 60px;
+    
     
 }
 
+/*--------------------site-header------------------*/
+.site-header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background: #333; 
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px; 
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    margin-right: auto;
+}
+
+.nav-links li a {
+    color: white; 
+    text-decoration: none;
+    padding: 15px 15px; 
+    display: block;
+}
+
+.nav-links li a.active {
+    color: #ffffff; 
+    font-weight: bold; 
+
+}
+
+.nav-links li a:hover, 
+.nav-links li a:focus {
+    background: #555; 
+}
+
+.nav-links li a.disabled {
+    color: grey;
+    pointer-events: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    margin-right: 5px; 
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: green; 
+    color: white; 
+    cursor: pointer;
+}
+
+.search-container button:hover,
+.search-container button:focus {
+    background: darkgreen; 
+}
+
 .form-container {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    background-color: rgba(240, 240, 240, 0.8);
     width: 50%;
     margin: 50px auto;
     padding: 20px;
@@ -17,6 +105,11 @@ body, html {
 .header {
     text-align: center;
     margin-bottom: 40px;
+}
+.header h2{
+    text-align: left;
+    margin-left: 60px;
+    color:#c59E67;
 }
 
 .logo {
@@ -81,23 +174,7 @@ body, html {
     margin-right: 0;
 }
 
-/* .hobbies input[type="checkbox"] {
-    margin-right: 5px;
-}
-.hobbies input[type="text"] {
-    width:auto;
-}
 
-.table table{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.table input[type="text"]{
-     width: 100%; 
-     box-sizing: border-box; 
-}  */
 .button {
     background-color: #78a9e5;
     color: white;
@@ -110,6 +187,19 @@ body, html {
     display: block;
     box-sizing: border-box; 
 }
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100; /* Ensure video stays in the background */
+    background-size: cover;
+}
+
 
 .button:hover {
     background-color: #377ec8;

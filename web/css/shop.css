@@ -1,0 +1,13 @@
+.headline {
+    background-image: url("../assets/media/pet-toys.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headlineContent {
+    color: rgba(255, 255, 255, 0.75);
+}
+.itemImage{
+    max-width: 420px;
+    max-height: 225px;
+}
