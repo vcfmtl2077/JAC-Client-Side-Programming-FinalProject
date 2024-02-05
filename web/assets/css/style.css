@@ -395,6 +395,7 @@ h6 {
   background: white;
   border-bottom: 2px solid white;
   text-align: center;
+  margin-top: 20px;
 }
 
 #hero .container {
@@ -454,7 +455,8 @@ h6 {
   }
 
   #hero .hero-img {
-    max-width: 90%;
+    max-width: 50%;
+    max-height: 50%;
   }
 }
 
