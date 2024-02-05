@@ -59,9 +59,34 @@
 
 ## codes details
 
-### RWD
+### Responsive
 
+Bootstrap’s grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
 
+```html
+<div class="container text-center">
+  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+  <div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  </div>
+
+  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+  <div class="row">
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+  </div>
+
+  <!-- Columns are always 50% wide, on mobile and desktop -->
+  <div class="row">
+    <div class="col-6">.col-6</div>
+    <div class="col-6">.col-6</div>
+  </div>
+</div>
+```
+
+------
 
 ### Animation
 
@@ -94,4 +119,23 @@
 </html>
 ```
 
+### Data Security 
+
+```javascript
+var ls = new SecureLS({ encodingType: 'aes'});
+//, isCompression: false, encryptionSecret: 'test' });
+
+```
+
+
+
+### Internationalization- i18next
+
+```html
+<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="nav-link scrollto dropdown-en"  	     onclick="changeLanguage('en')">English</a></li>
+    <li><a class="nav-link scrollto dropdown-fr" onclick="changeLanguage('fr')">Français</a>
+    </li>
+</ul>
+```
 
