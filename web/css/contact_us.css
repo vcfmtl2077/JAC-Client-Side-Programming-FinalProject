@@ -23,8 +23,6 @@ body {
 
 .navbar {
     display: flex;
-    /* justify-content: space-between; */
-    /* align-items:center; */
     width: 100%;
 }
 
@@ -50,9 +48,9 @@ body {
 }
 
 .nav-links li a.active {
-    color: #ffffff; /* This is already white, but you can increase the brightness if possible */
-    font-weight: bold; /* Makes the font bolder */
-    /* Any other styles to make it stand out */
+    color: #ffffff; 
+    font-weight: bold; 
+
 }
 
 .nav-links li a:hover, 
@@ -152,21 +150,4 @@ body {
     margin-bottom: 20px;
     padding:10px;
 }
-
-
-/* 
-#map {
-    height: 100%;
-  } */
-  
-  /* 
-   * Optional: Makes the sample page fill the window. 
-   */
-  /* html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  } 
-  */
 

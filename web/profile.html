@@ -45,7 +45,7 @@
           <li><a class="nav-link scrollto" href="./service.html">Services</a></li>
           <li><a class="nav-link scrollto" href="./shop.html">Products</a></li>
           <li><a class="nav-link scrollto" href="./contact_us.html">Contact</a></li>
-          <li><a class="getstarted scrollto" href="./login.html">Log in</a></li>
+          <li><a class="getstarted scrollto" id='loginLink', href="./login.html">Log in</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -58,16 +58,15 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
+     
       <div class="container">
-
         <div class="row no-gutters">
           <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-right">
             <div class="content">
               <h3>User Profile</h3>
               <p>
-                Basic Information
+                <strong id="userFullName"><!-- User's full name will be displayed here --></strong>
               </p>
-              <a href="#" class="about-btn">Details<i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
           <div class="col-xl-7 d-flex align-items-stretch" data-aos="fade-left">
@@ -75,13 +74,13 @@
               <div class="row">
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-receipt"></i>
-                  <h4>User name: </h4>
-                  <p>user name will display here</p>
+                  <p>Username</p>
+                  <h4 id="userName"><!-- Username will be displayed here --></h4>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i class="bx bx-cube-alt"></i>
-                  <h4>Phone Number and Birthday</h4>
-                  <p>phone number and birthday will display here</p>
+                  <p>Phone Number</p>
+                  <h4 id="userPhone"><!-- User's phone will be displayed here --></h4>
                 </div>
               </div>
             </div><!-- End .content-->
@@ -176,6 +175,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/secure-ls/dist/secure-ls.min.js"></script>
+  <script src="./js/signup.js"></script>
 
 </body>
 
