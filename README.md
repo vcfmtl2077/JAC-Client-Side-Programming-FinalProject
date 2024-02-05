@@ -6,58 +6,62 @@
 
 > ### Pet Shops
 >
-> > Explore a curated selection of pet shops offering the finest products for your pets.
+> > Pet shops offering the finest products for your pets.
 >
 > ### Service Providers
 >
-> > Connect with Pets doctor, groomers, trainers, and other professionals.
+> > Connect with Pets doctor, groomers, trainers, and adoption.
 >
 > ### Community Hub
 >
-> > Join a vibrant community of pet lovers to share stories, tips, and advice.
+> > Community of pet lovers to share stories, tips, and advice.
 >
-> ### Adoption Center
+> ### Life book for Pets
 >
-> > Find your next furry friend through our adoption center, promoting responsible pet ownership.
+> > Record every moment for your pets.
 
 
 
 ## Site Map
 
-![](screenShot\site map.jpg)
+![sitmap](screenShot\site map.jpg)
 
 ## Tech Stack
 
-![](screenShot\tech stack.jpg)
+![techStack](screenShot\tech stack.jpg)
 
-## Features
+### Features
 
-> ### Responsive Web design
+> ### Responsive Web design - Bootstrap 5
 >
 > Multiple layout for different device
 
 
 
-> ### Animation
+> ### Animation - AOS
 >
 > JavaScript Animation of various types of encryption including `AES`, `DES`, `Rabbit`, and `RC4`.
 
 
 
-> ### Data security
+> ### Data security - secure-ls
 >
 > Data encrypted - even for local storage
 >
 
 
 
-> ### Internationalization
+> ### Internationalization- i18next
 >
 > standard i18n features, also a complete solution to localize from web to mobile and desktop.
 
 
 
 ## codes details
+
+### RWD
+
+
 
 ### Animation
 
