@@ -8,23 +8,25 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Krub:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="css/service.css" rel="stylesheet">
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="css/service.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- <link href="css/vendor/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/vendor/aos.css" />
@@ -182,6 +184,7 @@
         </ul>
     </div>
 
+
       <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
@@ -197,16 +200,45 @@
           <li><a class="nav-link scrollto" href="./service.html">Services</a></li>
           <li><a class="nav-link scrollto" href="./shop.html">Products</a></li>
           <li><a class="nav-link scrollto" href="./contact_us.html">Contact</a></li>
-          <li><a class="getstarted scrollto" href="./login.html">Log in</a></li>
+          <li><a class="getstarted scrollto" id='loginLink', href="./login.html">Log in</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
 
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('fr')">Français</button>
-      </nav><!-- .navbar -->
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
 
-    </div>
-  </header><!-- End Header -->
+
+            <h1 class="logo"><a href="index.html">PetsPets</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="./assets/pets-logo-15.svg" alt="" class="img-fluid"></a> -->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="./index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="./about.html">About</a></li>
+                    <li><a class="nav-link scrollto" href="./service.html">Services</a></li>
+                    <li><a class="nav-link scrollto" href="./shop.html">Products</a></li>
+                    <li><a class="nav-link scrollto" href="./contact_us.html">Contact</a></li>
+                    <li><a class="getstarted scrollto" href="./login.html">Log in</a></li>
+                    <div class="dropdown">
+                        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Languages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="nav-link scrollto dropdown-en" onclick="changeLanguage('en')">English</a></li>
+                            <li><a class="nav-link scrollto dropdown-fr" onclick="changeLanguage('fr')">Français</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
 
 
     <!-- Begin page content -->
@@ -215,7 +247,7 @@
             <div class="py-160 min-vh-100 d-flex align-items-center position-relative lines-style-3">
                 <div class="line text-white"></div>
                 <div class="background bg-dark">
-                    <div class="background-image " ><img src="assets/media/pexels-ivan-babydov-7788657.jpg" alt="">
+                    <div class="background-image "><img src="assets/media/pexels-ivan-babydov-7788657.jpg" alt="">
                     </div>
                     <div class="background-color" style="background-color: rgb(14, 14, 14); opacity: 0.2;"></div>
                 </div>
@@ -223,7 +255,8 @@
                     <div class="row">
                         <div class="col-lg-1"></div>
                         <div data-aos="fade-right" class="col-12 col-lg-8 col-xl-7 aos-init aos-animate">
-                            <div class="headerContent text-white mb-0" data-i18n="service-slogan">Expert Care,<br> Your Pet's Joy.</div>
+                            <div class="headerContent text-white mb-0" data-i18n="service-slogan">Expert Care,<br> Your
+                                Pet's Joy.</div>
                         </div>
                     </div>
                 </div>
@@ -243,15 +276,14 @@
                                 <li data-i18n="service-bath-item2"></li>
                                 <li data-i18n="service-bath-item3"></li>
                                 <li data-i18n="service-bath-item4"></li>
-                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="#"
-                                data-i18n="service-reservation" data-i18n="service-reservation">Reservation<span class="btn-ball"
+                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="#" data-i18n="service-reservation"
+                                data-i18n="service-reservation">Reservation<span class="btn-ball"
                                     style="transform: translateY(0px);"></span></a>
                         </div>
                     </div>
                     <div class="gh-1 gv-3 align-items-center justify-content-between mb-110 row">
                         <div data-aos="fade-left" class="col-12 col-lg-6 order-lg-2 col aos-init aos-animate"><img
-                                class="w-100" src="assets/media/pet-hotel.jpg"
-                                alt="">
+                                class="w-100" src="assets/media/pet-hotel.jpg" alt="">
                         </div>
                         <div data-aos="fade-right"
                             class="col-12 col-lg-5 order-lg-1 ps-lg-0 ms-lg-30 col aos-init aos-animate">
@@ -263,8 +295,8 @@
                                 <li data-i18n="service-hotel-item2"></li>
                                 <li data-i18n="service-hotel-item3"></li>
                                 <li data-i18n="service-hotel-item4"></li>
-                            </ul><a class="btn btn-dark btn-with-ball mt-60"
-                                href="#" data-i18n="service-reservation">Reservation<span class="btn-ball"
+                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="#"
+                                data-i18n="service-reservation">Reservation<span class="btn-ball"
                                     style="transform: translateY(0px);"></span></a>
                         </div>
                     </div>
@@ -280,8 +312,8 @@
                                 <li data-i18n="service-groom-item2"></li>
                                 <li data-i18n="service-groom-item3"></li>
                                 <li data-i18n="service-groom-item4"></li>
-                            </ul><a class="btn btn-dark btn-with-ball mt-60"
-                                href="#" data-i18n="service-reservation">Reservation<span class="btn-ball"
+                            </ul><a class="btn btn-dark btn-with-ball mt-60" href="#"
+                                data-i18n="service-reservation">Reservation<span class="btn-ball"
                                     style="transform: translateY(0px);"></span></a>
                         </div>
                     </div>
@@ -293,70 +325,70 @@
     <footer id="footer">
 
         <div class="footer-top">
-          <div class="container">
-            <div class="row">
-    
-              <div class="col-lg-3 col-md-6 footer-contact">
-                <h3>PetsPets</h3>
-                <p>
-                  333 Rue image <br>
-                  Kirkland, QC A1B 2C3<br>
-                  Canada <br><br>
-                  <strong>Phone:</strong> +1 123 456 7890<br>
-                  <strong>Email:</strong> Web3@web3.com<br>
-                </p>
-              </div>
-    
-              <div class="col-lg-2 col-md-6 footer-links">
-                <h4>Site Map</h4>
-                <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                </ul>
-              </div>
-    
-              <div class="col-lg-3 col-md-6 footer-links">
-                <h4>Our Class</h4>
-                <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Java</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">DataBase</a></li>
-                  <li><i class="bx bx-chevron-right"></i> <a href="#">Front end</a></li>
-                </ul>
-              </div>
-    
-              <div class="col-lg-4 col-md-6 footer-newsletter">
-               <p><strong>Office Hours:</strong> Monday - Sunday(10:00 am - 9:00 pm) <br>
-                  All holidays and school vacations</p>
-              </div>
-    
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>PetsPets</h3>
+                        <p>
+                            333 Rue image <br>
+                            Kirkland, QC A1B 2C3<br>
+                            Canada <br><br>
+                            <strong>Phone:</strong> +1 123 456 7890<br>
+                            <strong>Email:</strong> Web3@web3.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Site Map</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Class</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Java</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">DataBase</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Front end</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <p><strong>Office Hours:</strong> Monday - Sunday(10:00 am - 9:00 pm) <br>
+                            All holidays and school vacations</p>
+                    </div>
+
+                </div>
             </div>
-          </div>
         </div>
-    
+
         <div class="container d-md-flex py-4">
-    
-          <div class="me-md-auto text-center text-md-start">
-            <div class="copyright">
-              &copy; Copyright <strong><span>PetsPets</span></strong>. All Rights Reserved
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>PetsPets</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by <a href="https://bootstrapmade.com/">Web3</a>
+                </div>
             </div>
-            <div class="credits">
-              Designed by <a href="https://bootstrapmade.com/">Web3</a>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
-          </div>
-          <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          </div>
         </div>
-      </footer><!-- End Footer -->
+    </footer><!-- End Footer -->
     <script src="js/vendor/color-modes.js"></script>
     <script src="js/vendor/bootstrap.bundle.js"></script>
     <script src="js/vendor/i18n/i18next.js"></script>
@@ -400,22 +432,22 @@
                     },
                     fr: {
                         translation: {
-                            "service-slogan": "Soin Expert,<br> Joie de votre Animal",
-                            "service-bath-title": "Spa Bulle Bliss pour Animaux",
+                            "service-slogan": "Soin Expert,<br> Joie De Votre Animal",
+                            "service-bath-title": "Spa Bulle Bliss Pour Animaux",
                             "service-bath-intro": "Spa Bulle Bliss pour Animaux offre une expérience de bain luxueuse et réconfortante pour les animaux de compagnie. Compréhendant l'importance de l'hygiène et du bien-être des animaux, nous nous spécialisons dans la fourniture d'un environnement serein et sécuritaire pour vos amis à fourrure. ",
                             "service-bath-item1": "Soins Holistiques pour Animaux",
                             "service-bath-item2": "Environnement Sans Stress",
                             "service-bath-item3": "Attention Personnalisée",
                             "service-bath-item4": "Équipe d'Experts",
 
-                            "service-hotel-title": "Complexe Hôtelier pour Animaux de Compagnie",
+                            "service-hotel-title": "Complexe Hôtelier <br>Pour Animaux De Compagnie",
                             "service-hotel-intro": "Notre service d'Hôtel pour Animaux offre un chez-soi unique et luxueux pour vos membres de la famille à fourrure lors de vos déplacements. Conscient des préoccupations des propriétaires d'animaux lorsqu'ils doivent voyager, nous avons créé un environnement sûr, amusant et confortable pour le séjour des animaux. Notre hôtel n'est pas seulement un établissement de pension ; c'est une retraite où les animaux peuvent profiter de leurs propres vacances pendant que leurs propriétaires sont absents.",
                             "service-hotel-item1": "Hébergements Confortables",
                             "service-hotel-item2": "Santé et Sécurité Priorisées",
                             "service-hotel-item3": "Activités Stimulantes",
                             "service-hotel-item4": "Soins Personnalisés",
 
-                            "service-groom-title": "Toilettage Parfait pour Animaux de Compagnie",
+                            "service-groom-title": "Toilettage Parfait <br>Pour Animaux De Compagnie",
                             "service-groom-intro": "Toilettage Parfait pour Animaux de Compagnie offre une expérience innovante et agréable, combinant le toilettage professionnel des animaux avec un service dédié de photographie pour animaux de compagnie. Nous comprenons le lien entre les animaux de compagnie et leurs propriétaires et visons à capturer et à améliorer cela à travers nos services uniques. Notre établissement est conçu pour garantir que votre animal de compagnie non seulement paraît sous son meilleur jour, mais se sente également à l'aise et aimé tout au long du processus.",
                             "service-groom-item1": "Services de Toilettage Experts",
                             "service-groom-item2": "Photographie Professionnelle pour Animaux de Compagnie",

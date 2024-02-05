@@ -1,4 +1,5 @@
-var ls = new SecureLS({ encodingType: 'aes' });
+var ls = new SecureLS({ encodingType: 'aes'});//, isCompression: false, encryptionSecret: 'test' });
+
 const signupForm = document.getElementById("signupForm");
 const loginForm = document.getElementById("loginForm");
 const loginLink = document.getElementById("loginLink");
@@ -38,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    if (loginLink) updateLoginStatus();
+    if (loginLink) {
+        updateLoginStatus();
+        updateUserProfile(); 
+    }
 })
 
 function populateYears() {
@@ -151,7 +155,9 @@ function authenticate() {
     if (user && user.password === password) {
         alert("Login successful!");
         localStorage.setItem('isLoggedIn', 'true');
-        window.location.href = 'index.html'; 
+        localStorage.setItem('currentUserName', username);
+
+        window.location.href = 'profile.html'; 
         //window.location.href = 'contact_us.html';
 
     } else {
@@ -179,8 +185,21 @@ function updateLoginStatus() {
     }
 }
 
+function updateUserProfile() {
+    let isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    let username = localStorage.getItem('currentUserName'); 
+    let userData = ls.get(username); 
+    if (isLoggedIn && userData) {
+        document.getElementById('userFullName').textContent = `${userData.firstname} ${userData.lastname}`;
+        document.getElementById('userName').textContent = userData.username;
+        document.getElementById('userPhone').textContent = userData.phone;
+    }
+  }
+
+  
 function logoutUser() {
     localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('currentUserName')
     updateLoginStatus();
 
     if (!location.pathname.includes('contact_us.html')) {
